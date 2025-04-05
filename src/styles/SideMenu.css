@@ -1,0 +1,51 @@
+.side-menu {
+    width: 250px;
+    background-color: var(--spotify-black);
+    padding: 20px 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid var(--spotify-dark-gray);
+  }
+  
+  .menu-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    color: var(--spotify-white);
+  }
+
+  
+  .menu-items {
+    list-style: none;
+  }
+  
+  .menu-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--spotify-gray);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-item:hover {
+    color: var(--spotify-white);
+  }
+  
+  .menu-item.active {
+    color: var(--spotify-white);
+    background-color: var(--spotify-dark-gray);
+    border-left: 4px solid var(--spotify-green);
+    box-sizing: border-box;
+  }
+  
+  .menu-item::before {
+    content: "•";
+    color: var(--spotify-green);
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  

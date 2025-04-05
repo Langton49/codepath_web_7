@@ -1,0 +1,57 @@
+.featured-artist {
+    background: linear-gradient(145deg, var(--spotify-dark-gray), var(--spotify-darker-gray));
+    color: var(--spotify-white);
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 250px;
+    height: 160px;
+    animation: fadeIn 0.5s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--spotify-dark-gray);
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .featured-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--spotify-gray);
+    margin-bottom: 10px;
+  }
+
+  .artist-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .artist-genre {
+    font-size: 0.9rem;
+    color: var(--spotify-gray);
+    margin-bottom: 10px;
+  }
+  
+  .artist-followers {
+    font-size: 0.8rem;
+    color: var(--spotify-green);
+  }
+
+  
+  .artist-list h2 {
+    margin-bottom: 20px;
+    color: var(--spotify-white);
+    font-size: 1.5rem;
+  }
+  
+  .artist-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
