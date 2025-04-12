@@ -1,47 +1,44 @@
-# Web Development Project 5 - *SpotiView*
+# Web Development Project 6 - *SpotiView v2.0*
 
 Submitted by: **Munashe Mukweya**
 
-This web app: **SpotiView is a web application that allows users to search for artists based on search terms and a genre filter. It also features cards with the artist's information as well as some details relating to the current search.**
+This web app: **Is a dashboard view that allows users to search for their favourite artists using the Spotify API. The app displays dat that users could find interesting, including information about an artists followers, the genres they're known for and their popularity. It also includes charts that summarise some follower data of each search/query.**
 
-Time spent: **5** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [x] **`useEffect` React hook and `async`/`await` are used**
-- [x] **The app dashboard includes at least three summary statistics about the data** 
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - *insert details here*
-- [x] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [x] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar 
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
+- [X] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+  - *To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.*
+- [X] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+  -  *To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording.*
+- [X] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
+
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
-- [x] Filters use different input types
-  - e.g., as a text input, a dropdown or radio selection, and/or a slider
-- [ ] The user can enter specific bounds for filter values
+- [ ] The site’s customized dashboard contains more content that explains what is interesting about the data 
+  - e.g., an additional description, graph annotation, suggestion for which filters to use, or an additional page that explains more about the data
+- [ ] The site allows users to toggle between different data visualizations
+  - User should be able to use some mechanism to toggle between displaying and hiding visualizations 
 
+  
 The following **additional** features are implemented:
 
-* [x] List anything else that you added to improve the site's functionality!
-Added a feature that displays each artist from the resulting search one at a time using the setInterval function. 
+* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='/src/assets/webProj4.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/src/assets/webProj5.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap
@@ -52,11 +49,11 @@ GIF created with LICEcap
 
 ## Notes
 
-No major issues
+I really didn't know how I was going to make two unique charts with the data that was made available by the Spotify API, so I just decided to focus on the followers as it was the only value from the response that had any significance. I also had trouble with rendering the charts. I tried using recharts but it didn't work. After asking GitHub Copilot, I concluded that the problem may be Microsoft Defender flagging the library as malware so I had to use another library. I used chart.js which has a bit of a learning curve but I got it in the end with the help of Copilot.
 
 ## License
 
-    Copyright [2025] [Munashe Mukweya]
+    Copyright 2025 Munashe Mukweya
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

@@ -1,0 +1,52 @@
+.detail-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.detail-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.detail-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.detail-card span{
+    color: var(--spotify-green);
+}
+
+.detail-card h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-card p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.artist-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+    border: 4px solid var(--spotify-green);
+}

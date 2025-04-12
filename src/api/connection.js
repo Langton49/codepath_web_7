@@ -60,6 +60,7 @@ export async function getArtistBySearch(searchTerm, genreFilter) {
             name: artist.name,
             genre: artist.genres[0] || 'Not Specified',
             followers: artist.followers.total,
+            popularity: artist.popularity,
             imageUrl: artist.images[0]?.url
         }));
 
@@ -88,13 +89,49 @@ export async function getArtistsByGenre(genre) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+
         return data.artists.items.map(artist => ({
             id: artist.id,
             name: artist.name,
+            genre: artist.genres[0] || 'Not Specified',
             followers: artist.followers.total,
+            popularity: artist.popularity,
             imageUrl: artist.images[0]?.url
         }));
     } catch (err) {
         console.error('Error fetching artists by genre:', err);
     }
 }
+
+export async function getArtistById(id) {
+    const token = await getToken();
+    if (!token) {
+        console.error('Failed to retrieve access token.');
+        return;
+    }
+    try {
+        const response = await fetch(`https://api.spotify.com/v1/artists/${id}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        });
+        if (!response.ok) {
+            console.error('Response not OK:', response);
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return {
+            name: data.name,
+            followers: data.followers.total,
+            popularity: data.popularity,
+            genres: data.genres,
+            images: data.images,
+            profile: data.external_urls.spotify
+        };
+    } catch (err) {
+        console.error('Error fetching artists by id:', err);
+    }
+
+}
+
